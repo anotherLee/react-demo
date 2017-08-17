@@ -1,8 +1,17 @@
 import _ from 'lodash'
+import $ from 'jquery'
 
 function component () {
-  var element = document.createElement('div')
-  element.innerHTML = _.join(['hello', 'webpack'], ' ')
-  return element
+  var $element = $('<div></div>')
+  $element.html(_.join(['hello', 'webpack'], ' '))
+  return $element
 }
-document.body.appendChild(component())
+
+$('body').append(component())
+
+console.log('你好啊')
+console.log('试试npm run build')
+
+console.log('watch')
+
+console.log('试试dev-server')
